@@ -34,8 +34,8 @@ def game():
         while True:
 
             guess = input(f'Enter a letter : ')
-            if len(guess) > 1:
-                print(f'You must input one letter !')
+            if len(guess) > 1 and guess != word:
+                print(f'You must input one letter or correct word!')
             else:
                 break
 
