@@ -1,25 +1,25 @@
-
 from random import choice
 
 def game():
-    word = choice(['test', 'oko'])
+    word = choice(["buty", "spodnie", "koszula", "telefon", "kubek", "książka", "długopis", "notes", "portfel", "klucze", "okulary", "komputer", "torba", "plecak", "słuchawki", "zegarek", "lampka", "telewizor", "szalik", "kurtka"])
 
     username = input(f'Hello, whats your name : ')
     print(f'Hi, {username} in Hangman Game !')
     print('*' *40)
 
     guessed = ''
-    tries = 3
+    tries = 10
 
     while tries > 0:
         blanks = 0
 
-        print('Word: ', end='')
+        print(f'Lenght of the searched word is : ({len(word)})')
+        print(f'Tries {tries},  Word: ',end='')
         for char in word:
             if char in guessed:
                 print(char, end='')
             else:
-                print('-', end='')
+                print(' - ', end='')
                 blanks += 1
 
         print('\n')
